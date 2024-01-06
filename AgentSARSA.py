@@ -24,7 +24,7 @@ def get_board(board,move=None,player=2):
     board_copy[row][col]=player
     return board_copy
     
-def choose_action(board,epsilon=1):
+def choose_action(board,epsilon=1,file_path='q_values.json'):
     moves=get_moves(board)
     print("moves possible:")
     print(moves)
@@ -33,7 +33,7 @@ def choose_action(board,epsilon=1):
     x=np.random.rand(1)
     maxAfterstateAction=();
     q_values={}
-    with open('q_values.json', 'r') as file:
+    with open(file_path, 'r') as file:
         q_values = json.load(file)
         #print("Loaded Q values:", q_values)
     max=-1000     #no value could possibly be lower than -1000
