@@ -1,0 +1,4 @@
+numpy~=1.23.5
+pandas~=2.1.2
+flask~=3.0.0
+flask_cors~=4.0.0

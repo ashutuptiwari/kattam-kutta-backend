@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import copy
 def get_state(board):
     state = tuple(map(tuple, board))

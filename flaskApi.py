@@ -1,12 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from someShitFunctions import display_board, check_termination, reset, new_move_dummy
+from someShitFunctions import display_board, check_termination, reset
 import numpy as np
 import copy
-import pickle
 import json
-import pandas as pd
-from AgentSARSA import choose_action, update_qvalue, reward, get_state
+from AgentSARSA import choose_action, reward, get_state
 
 app = Flask(__name__)
 CORS(app)
