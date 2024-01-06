@@ -15,6 +15,10 @@ board_prev = None
 alpha = 0.5
 gamma = 1
 
+@app.route('/')
+def hello():
+    return "Hello World!"
+
 
 @app.route('/api/logMove', methods=['POST'])
 def receive_cell_data():
